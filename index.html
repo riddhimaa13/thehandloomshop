@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art of Handloom</title>
+    <meta name="description" content="Discover exquisite handwoven textiles and traditional Indian handloom products. Shop authentic silk sarees, cotton dupattas, and handloom scarves.">
+    <meta name="keywords" content="handloom, saree, traditional textiles, Indian crafts, silk saree, cotton dupatta">
+    <title>The Art of Handloom - Handloom Heritage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>Handloom Heritage</h1>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -19,44 +23,52 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    <button class="cart-icon" aria-label="View cart">🛒<span class="cart-badge"></span></button>
     </header>
 
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h2>Exquisite Handwoven Textiles</h2>
-                <p>Discover the rich tradition and timeless elegance of Indian handloom.</p>
+                <h2><span class="hero-highlight">Exquisite</span> Handwoven Textiles</h2>
+                <p class="hero-sub">Discover the rich tradition and timeless elegance of Indian handloom, crafted by skilled artisans for you.</p>
                 <a href="#products" class="cta-button">Explore Our Collection</a>
+                <div class="hero-artisan">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Artisan weaving" />
+                    <span>Handcrafted with love in India</span>
+                </div>
             </div>
         </section>
 
         <section id="products" class="products">
             <h2>Our Products</h2>
-            <div class="product-gallery">
-                <div class="product-card">
-                    <img src="images/saree1.jpg" alt="Handloom Saree 1">
-                    <h3>Silk Saree</h3>
-                    <p>A classic handwoven silk saree with intricate motifs.</p>
-                    <button class="add-to-cart" data-product="Silk Saree">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/saree2.jpg" alt="Handloom Saree 2">
-                    <h3>Cotton Dupatta</h3>
-                    <p>Light and airy handspun cotton dupatta for everyday wear.</p>
-                    <button class="add-to-cart" data-product="Cotton Dupatta">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/saree3.jpg" alt="Handloom Saree 3">
-                    <h3>Handloom Scarf</h3>
-                    <p>A versatile handloom scarf, perfect for any season.</p>
-                    <button class="add-to-cart" data-product="Handloom Scarf">Add to Cart</button>
-                </div>
+            <div class="product-gallery" id="product-gallery">
+                <!-- Products will be rendered here by JS -->
             </div>
         </section>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items"></div>
+            <div class="cart-total"></div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
 
         <section id="about" class="about-us">
-            <h2>About Us</h2>
-            <p>We are dedicated to preserving the art of handloom weaving and supporting local artisans. Our textiles are a testament to their skill and passion, with each piece telling a unique story of tradition and craftsmanship.</p>
+            <div class="about-card">
+                <img class="about-img" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Handloom artisan" />
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>At <b>Handloom Heritage</b>, we are passionate about preserving the ancient art of handloom weaving. Our mission is to empower local artisans and bring their timeless creations to the world. Each piece in our collection is a unique story of tradition, skill, and love for the craft.</p>
+                    <ul class="about-list">
+                        <li>🌿 Ethically sourced materials</li>
+                        <li>🧵 100% handcrafted by skilled artisans</li>
+                        <li>🌏 Supporting sustainable livelihoods</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="contact">
@@ -75,9 +87,7 @@
         <p>&copy; 2025 Handloom Heritage. All rights reserved.</p>
     </footer>
 
-    <script src="script.js">
-      
-    </script>
+    <script src="script.js"></script>
     
         <script>
   window.watsonAssistantChatOptions = {
